@@ -4,7 +4,7 @@ Spring Boot 3 / Java 21 service for society administration, buildings, units, re
 
 ## Run
 
-1. Create the `mysociety` PostgreSQL database and load the canonical DDL from the Identity Service repository.
+1. Create the `mysociety` PostgreSQL database and apply `database/migrations/V1__society_schema.sql` as described in [`database/README.md`](database/README.md).
 2. Copy `.env.example` values into your environment. `JWT_SECRET` must be a private HS256 secret of at least 32 bytes and `JWT_ISSUER` must be `mysociety-identity`.
 3. Run `gradlew.bat bootRun --args='--spring.profiles.active=local'` on Windows, or `./gradlew bootRun` elsewhere.
 
