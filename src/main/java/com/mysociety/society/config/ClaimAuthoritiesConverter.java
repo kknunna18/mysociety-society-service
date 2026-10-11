@@ -16,6 +16,9 @@ final class ClaimAuthoritiesConverter implements Converter<Jwt, Collection<Grant
             if (value instanceof Collection<?> values)
                 values.forEach(v -> authorities.add(new SimpleGrantedAuthority((claim.equals("roles") ? "ROLE_" : "") + v)));
         }
+        String scope = jwt.getClaimAsString("scope");
+        if (scope != null && !scope.isBlank())
+            Arrays.stream(scope.trim().split("\\s+")).forEach(code -> authorities.add(new SimpleGrantedAuthority("PERMISSION_" + code)));
         return authorities;
     }
 }

@@ -35,7 +35,7 @@ management:
       probability: ${TRACING_SAMPLING_PROBABILITY:1.0}
 app:
   security:
-    jwt-secret: ${JWT_SECRET:change-me-in-production-use-a-32-byte-minimum-secret}
+    jwt-secret: ${JWT_SECRET:8fK9xP2mQ7vL1zN4rT6yU0aS3dH5jW8c}
     issuer: ${JWT_ISSUER:mysociety-identity}
 springdoc:
   api-docs:
