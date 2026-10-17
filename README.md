@@ -25,3 +25,7 @@ accepted. Every tenant-owned lookup constrains `society_id`; do not log JWTs, cr
 `gradlew.bat clean build` runs unit, web, and architecture tests. Tests do not require Docker. Testcontainers PostgreSQL
 is available for integration tests when Docker is present.
 MySociety Society Service
+
+## Database
+
+Schema migrations and notes are in [database/](database/README.md).
